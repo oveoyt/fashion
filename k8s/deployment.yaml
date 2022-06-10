@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Jordan
+  name: oil
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: Jordan
+      app: oil
   template:
     metadata:
       labels:
-        app: Jordan
+        app: oil
     spec:
       containers:
       - image: okteto.dev/ray:latest
-        name: Jordan
+        name: oil
         ports:
         - containerPort: 8080
         env:
